@@ -1,0 +1,12 @@
+includes:
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - phpstan-baseline-80.neon
+parameters:
+    level: 6
+    bootstrapFiles:
+        - vendor/yiisoft/yii2/Yii.php
+    paths:
+        - src
+        - tests
