@@ -30,6 +30,7 @@ class RoutesLoaderTest extends TestCase
     {
         $rule = $this->createMock(UrlRule::class);
         $route = $this->createMock(Route::class);
+        $route->expects($this->once())->method('getPath')->willReturn('/test');
 
         $ruleCollection = $this->createMock(RuleCollectionInterface::class);
         $ruleCollection->expects($this->once())

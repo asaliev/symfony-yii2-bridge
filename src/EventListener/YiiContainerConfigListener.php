@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Asaliev\Yii2Bridge\EventListener;
 
 use Asaliev\Yii2Bridge\Event\WebApplicationBeforeInitializeEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use yii\di\Container;
 use Yii;
+use yii\di\Container;
 
 final class YiiContainerConfigListener implements EventSubscriberInterface
 {

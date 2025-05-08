@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Asaliev\Yii2Bridge\Controller;
 
 use Asaliev\Yii2Bridge\Exception\DispatcherException;
