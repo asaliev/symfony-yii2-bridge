@@ -1,0 +1,26 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method Asaliev\\\\Yii2Bridge\\\\Yii2Bundle::getContainerExtension\\(\\) never returns null so it can be removed from the return type\\.$#"
+			count: 1
+			path: src/Yii2Bundle.php
+
+		-
+			message: "#^Instanceof between yii\\\\web\\\\UrlRuleInterface and yii\\\\web\\\\UrlRuleInterface will always evaluate to true\\.$#"
+			count: 1
+			path: src/Routing/RuleCollection.php
+
+		-
+			message: "#^Method Asaliev\\\\Yii2Bridge\\\\Application\\\\PsrPreferredContainerAdapter::get\\(\\) has parameter \\$config with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Application/PsrPreferredContainerAdapter.php
+
+		-
+			message: "#^Method Asaliev\\\\Yii2Bridge\\\\Application\\\\PsrPreferredContainerAdapter::get\\(\\) has parameter \\$params with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Application/PsrPreferredContainerAdapter.php
+
+		-
+			message: "#^Method Asaliev\\\\Yii2Bridge\\\\Config\\\\Loader\\\\PhpArrayLoader::load\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Config/Loader/PhpArrayLoader.php
