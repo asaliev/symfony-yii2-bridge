@@ -1,6 +1,6 @@
 {
     "name": "asaliev/symfony-yii2-bridge",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "symfony-bundle",
     "homepage": "https://github.com/asaliev/symfony-yii2-bridge",
     "keywords": [
