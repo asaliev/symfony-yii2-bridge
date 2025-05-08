@@ -15,7 +15,7 @@ permissions:
   contents: read
 
 jobs:
-  php74-tests:
+  php74:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -44,7 +44,7 @@ jobs:
         run: composer phpstan-74
       - name: PHPUnit
         run: composer test
-  php80-tests:
+  php8:
     runs-on: ubuntu-latest
     strategy:
       matrix:
