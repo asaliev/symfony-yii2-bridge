@@ -34,10 +34,13 @@ final class YiiDispatcherHandler
     public function __invoke(RunApplicationMessage $message): Response
     {
         $yii = $message->getApplication();
-
         ob_start();
-        $yii->run();
-        $yiiOutput = ob_get_clean();
+
+        try {
+            $yii->run();
+        } finally {
+            $yiiOutput = ob_get_clean();
+        }
 
         return $this->responseAdapter->toSymfonyResponse($yii->getResponse(), $yiiOutput);
     }

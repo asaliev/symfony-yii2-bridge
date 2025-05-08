@@ -28,14 +28,6 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
       - uses: actions/checkout@v4
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
       - name: Install Dependencies
         run: composer install --no-interaction --no-progress --prefer-dist
       - name: PHPCS
@@ -57,14 +49,6 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
       - uses: actions/checkout@v4
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
       - name: Install Dependencies
         run: composer install --no-interaction --no-progress --prefer-dist
       - name: PHPCS
