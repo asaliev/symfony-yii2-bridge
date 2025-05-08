@@ -44,9 +44,8 @@
         }
     },
     "scripts": {
-        "phpcs": "vendor/bin/phpcs src/",
-        "phpstan-74": "vendor/bin/phpstan analyse -c phpstan.74.neon --no-progress --memory-limit 512M",
-        "phpstan-80": "vendor/bin/phpstan analyse -c phpstan.80.neon --no-progress --memory-limit 512M",
-        "test": "vendor/bin/phpunit --testdox --no-interaction"
+        "phpcs": "@php vendor/bin/phpcs src/",
+        "phpstan": "@php vendor/bin/phpstan analyse src/ tests/ -c phpstan.neon.php --no-progress --memory-limit 512M",
+        "test": "@php vendor/bin/phpunit --testdox --no-interaction"
     }
 }

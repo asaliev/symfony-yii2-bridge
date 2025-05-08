@@ -15,11 +15,11 @@ permissions:
   contents: read
 
 jobs:
-  php74:
+  php-cli:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: [ 7.4 ]
+        php-version: [ 7.4, 8.0, 8.1, 8.2, 8.3, 8.4 ]
     steps:
       #  To automatically get bug fixes and new Php versions for shivammathur/setup-php,
       # change this to (see https://github.com/shivammathur/setup-php#bookmark-versioning):
@@ -33,27 +33,6 @@ jobs:
       - name: PHPCS
         run: composer phpcs
       - name: PHPStan
-        run: composer phpstan-74
-      - name: PHPUnit
-        run: composer test
-  php8:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php-version: [ 8.0, 8.1, 8.2, 8.3, 8.4 ]
-    steps:
-      #  To automatically get bug fixes and new Php versions for shivammathur/setup-php,
-      # change this to (see https://github.com/shivammathur/setup-php#bookmark-versioning):
-      # uses: shivammathur/setup-php@v2
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-version }}
-      - uses: actions/checkout@v4
-      - name: Install Dependencies
-        run: composer install --no-interaction --no-progress --prefer-dist
-      - name: PHPCS
-        run: composer phpcs
-      - name: PHPStan
-        run: composer phpstan-80
+        run: composer phpstan
       - name: PHPUnit
         run: composer test
