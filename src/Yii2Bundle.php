@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Asaliev\Yii2Bridge;
 
 use Asaliev\Yii2Bridge\DependencyInjection\Yii2Extension;

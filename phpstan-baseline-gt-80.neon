@@ -1,0 +1,11 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method Asaliev\\\\Yii2Bridge\\\\Config\\\\Loader\\\\PhpArrayLoader::load\\(\\) has parameter \\$resource with no type specified\\.$#"
+			count: 1
+			path: src/Config/Loader/PhpArrayLoader.php
+
+		-
+			message: "#^Method Asaliev\\\\Yii2Bridge\\\\Routing\\\\RoutesLoader::load\\(\\) has parameter \\$resource with no type specified\\.$#"
+			count: 1
+			path: src/Routing/RoutesLoader.php

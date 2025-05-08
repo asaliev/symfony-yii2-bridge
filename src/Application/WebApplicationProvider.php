@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Asaliev\Yii2Bridge\Application;
 
 use Asaliev\Yii2Bridge\Config\Config;
-use Asaliev\Yii2Bridge\Event\WebApplicationInitializedEvent;
 use Asaliev\Yii2Bridge\Event\WebApplicationBeforeInitializeEvent;
+use Asaliev\Yii2Bridge\Event\WebApplicationInitializedEvent;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use yii\base\Application;
 use yii\web\Application as WebApplication;
