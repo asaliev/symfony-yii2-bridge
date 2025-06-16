@@ -19,7 +19,7 @@ $config = [
 ];
 
 if (PHP_VERSION_ID >= 80000) {
-    $config['includes'][] = __DIR__ . '/phpstan-baseline-gt-80.neon';
+    $config['includes'][] = __DIR__ . '/phpstan-baseline-gte-80.neon';
 }
 
 return $config;
