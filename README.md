@@ -1,5 +1,7 @@
 # symfony-yii2-bridge
 
+[![codecov](https://codecov.io/gh/asaliev/symfony-yii2-bridge/graph/badge.svg?token=EIQIG7VHV4)](https://codecov.io/gh/asaliev/symfony-yii2-bridge)
+
 This bundle was created as part of a workshop presentation for my team. The goal was to tackle a hypothetical scenario where we needed to migrate a legacy Yii2 application to Symfony incrementally. It is not intended to be a production-ready plugin but serves as an example of how such a migration could be approached.
 
 Supports PHP 7.4+ and Symfony 5.4+.
